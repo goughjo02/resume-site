@@ -31,6 +31,8 @@ class App extends Component {
         <CssBaseline />
         <MuiThemeProvider theme={theme}>
           <Header />
+          <div style={{height: '100vh', width: '100vw'}}>
+          </div>
         </MuiThemeProvider>
       </Fragment>
     );

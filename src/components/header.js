@@ -1,22 +1,47 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
+import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import PropTypes from 'prop-types';
+import AppBar from '@material-ui/core/AppBar';
+import PropTypes from "prop-types";
 import ME from "../sdford.jpg";
 
 const styles = theme => ({
-    headImage: {
-        width: '100vw',
-        height: '50vh',
-        maxHeight: '50vh',
-        display: 'flex',
-        alignItems: 'center',
-        overflow: 'hidden'
-    },
     root: {
-        flexGrow: 1
+        display: 'initial',
+    },
+    headImage: {
+        width: "100vw",
+        height: "60vh",
+        backgroundImage: `url(${ME})`,
+        backgroundSize: "cover",
+        backgroundPosition: "left center",
+        [theme.breakpoints.down("sm")]: {
+            height: "50vh"
+        },
+        [theme.breakpoints.only("md")]: {
+            height: "60vh"
+        },
+        [theme.breakpoints.up("md")]: {
+            height: "80vh"
+        }
+    },
+    image: {
+        width: "100%",
+        height: "auto",
+        minWidth: "100vw",
+        minHeight: "100%"
+    },
+    appBar: {
+        flexGrow: 1,
+        position: '-webkit-sticky',
+        position: 'sticky',
+        top: 0
+    },
+    tab: {
+        width: '100px'
     }
 });
 
@@ -39,21 +64,20 @@ class Header extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
-            <div className={classes.header}>
-                <img src={ME} width={'100%'} height={'auto'} alt="header" />
-                </div>
-                <Paper className={classes.root}>
+            <div className={classes.root}>
+                <div className={classes.headImage} />
+                <Paper className={classes.appBar}>
                     <Tabs
                         value={this.state.value}
                         onChange={this.handleChange}
                         indicatorColor="primary"
                         textColor="primary"
                         centered
+                        fullWidth={!isWidthUp('sm', this.props.width)}
                     >
-                        <Tab label="Item One" />
-                        <Tab label="Item Two" />
-                        <Tab label="Item Three" />
+                        <Tab className={classes.tab} label="School" />
+                        <Tab className={classes.tab} label="Work" />
+                        <Tab className={classes.tab} label="Projects" />
                     </Tabs>
                 </Paper>
             </div>
@@ -62,9 +86,10 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  classes: PropTypes.object.isRequired,
+    classes: PropTypes.object.isRequired
 };
 
 const styledComponent = withStyles(styles, { withTheme: true })(Header);
+const withWidthComponent = withWidth()(styledComponent);
 
-export default styledComponent;
+export default withWidthComponent;

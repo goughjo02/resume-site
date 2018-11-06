@@ -1,20 +1,22 @@
 import React, { Component } from "react";
 import { withStyles } from "@material-ui/core/styles";
-import withWidth, { isWidthUp } from '@material-ui/core/withWidth';
+import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import AppBar from '@material-ui/core/AppBar';
+import AppBar from "@material-ui/core/AppBar";
 import PropTypes from "prop-types";
 import ME from "../sdford.jpg";
 
 const styles = theme => ({
     root: {
-        display: 'initial',
+        display: "initial"
     },
     headImage: {
         width: "100vw",
         height: "60vh",
+        display: "flex",
+        justifyContent: "flex-end",
         backgroundImage: `url(${ME})`,
         backgroundSize: "cover",
         backgroundPosition: "left center",
@@ -36,12 +38,26 @@ const styles = theme => ({
     },
     appBar: {
         flexGrow: 1,
-        position: '-webkit-sticky',
-        position: 'sticky',
+        position: "-webkit-sticky",
+        position: "sticky",
         top: 0
     },
     tab: {
-        width: '100px'
+        width: "100px"
+    },
+    text: {
+        flex: "0 1 300px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        fontSize: "72px",
+        [theme.breakpoints.down("sm")]: {
+            flex: "1",
+            alignItems: 'center'
+        },
+        [theme.breakpoints.up("sm")]: {
+            flex: "0 1 300px"
+        }
     }
 });
 
@@ -65,7 +81,12 @@ class Header extends Component {
         const { classes } = this.props;
         return (
             <div className={classes.root}>
-                <div className={classes.headImage} />
+                <div className={classes.headImage}>
+                    <div className={classes.text}>
+                        <div className={"fancyText"}>Creator</div>
+                        <div className={"fancyText"}>Explorer</div>
+                    </div>
+                </div>
                 <Paper className={classes.appBar}>
                     <Tabs
                         value={this.state.value}
@@ -73,7 +94,7 @@ class Header extends Component {
                         indicatorColor="primary"
                         textColor="primary"
                         centered
-                        fullWidth={!isWidthUp('sm', this.props.width)}
+                        fullWidth={!isWidthUp("sm", this.props.width)}
                     >
                         <Tab className={classes.tab} label="School" />
                         <Tab className={classes.tab} label="Work" />

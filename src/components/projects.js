@@ -11,9 +11,9 @@ import Typography from "@material-ui/core/Typography";
 
 import Dialog from "./dialog";
 
-import AIB from "../aib.jpg";
-import PP from "../pp.png";
-import Initiafy from "../initiafy.jpeg";
+import Rise from "../rise.png";
+import GWK from "../gwk.jpeg";
+import Thesis from "../thesis.jpeg";
 
 const styles = theme => ({
     holder: {
@@ -28,14 +28,10 @@ const styles = theme => ({
     media: {
         // ⚠️ object-fit is not supported by IE 11.
         objectFit: "cover"
-    },
-    contain: {
-        // ⚠️ object-fit is not supported by IE 11.
-        objectFit: "contain"
     }
 });
 
-class WorkSection extends Component {
+class ProjectsSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -60,26 +56,27 @@ class WorkSection extends Component {
 
     eductations = [
         {
-            institution: "Grant Thornton",
-            years: "Jan 2017 - Dec 2017",
-            description: "Case Executive",
-            image: AIB,
-            elaboration: "managed accounts and data flow"
-        },
-        {
-            institution: "Peaceful Programming",
-            years: "Jam 2018 - May 2018",
-            description: "Director",
-            image: PP,
+            institution: "Rise Rwanda",
+            years: "Feb 2017 - present",
+            description: "Chairman",
+            image: Rise,
             elaboration:
-                "Peaceful Programming is my company. I have had several small projects (websites, simple libraries) and one large project. The large project recently finished (March 2018). It involved the construction of a remote data acquisition system, with realtime data visualization. Technologies used - Python, Elixir Phoenix, ReactJs, C++/Arduino"
+                "manage website and applications"
         },
         {
-            institution: "Initiafy",
-            years: "June 2018 - Present",
-            description: "Web Developer",
-            image: Initiafy,
-            elaboration: "Production of an enterprise web platform"
+            institution: "Wave energy testing GWK",
+            years: "October 2018",
+            description: "Data Acquisition Lead",
+            image: GWK,
+            elaboration:
+                "undertook gathering of data during development of a novel wave energy machine"
+        },
+        {
+            institution: "Undergraduate Research",
+            years: "Mar 2009 - Jun 2010",
+            description: "Mechanotransduction",
+            image: Thesis,
+            elaboration: "Investigated the effects of mechanical stimulation on the development of articular cartilage"
         }
     ];
 
@@ -98,11 +95,7 @@ class WorkSection extends Component {
                                 <CardMedia
                                     component="img"
                                     alt={e.institution}
-                                    className={
-                                        e.institution == "Peaceful Programming"
-                                            ? classes.contain
-                                            : classes.media
-                                    }
+                                    className={classes.media}
                                     height="140"
                                     image={e.image}
                                     title={e.institution}
@@ -148,6 +141,6 @@ class WorkSection extends Component {
     }
 }
 
-const styledComponent = withStyles(styles, { withTheme: true })(WorkSection);
+const styledComponent = withStyles(styles, { withTheme: true })(ProjectsSection);
 
 export default styledComponent;

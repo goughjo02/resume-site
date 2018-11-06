@@ -12,6 +12,7 @@ import ME from "../sdford.jpg";
 
 import School from "./school";
 import Work from "./work";
+import Projects from "./projects";
 
 function TabContainer({ children, dir }) {
     return (
@@ -133,7 +134,7 @@ class Header extends Component {
                         <Work />
                     </TabContainer>
                     <TabContainer dir={theme.direction}>
-                        Item Three
+                        <Projects />
                     </TabContainer>
                 </SwipeableViews>
             </div>

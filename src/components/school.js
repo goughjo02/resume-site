@@ -9,19 +9,21 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 
+import Dialog from "./dialog";
+
 import Belvedere from "../belvedere.jpg";
 import TCD from "../tcd.jpeg";
 import UCD from "../ucd.jpg";
 
 const styles = theme => ({
     holder: {
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-around'
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-around"
     },
     card: {
         maxWidth: 270,
-        margin: '8px'
+        margin: "8px"
     },
     media: {
         // ⚠️ object-fit is not supported by IE 11.
@@ -33,49 +35,70 @@ class SchoolSection extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            selected: ""
+            selectedInst: "",
+            selectedElab: "",
+            dialogOpen: false
         };
     }
 
-    static defaultProps = {};
+    handleDialogOpen = (inst, elab) => {
+        console.log("trying to open");
+        this.setState({
+            dialogOpen: true,
+            selectedInst: inst,
+            selectedElab: elab
+        });
+    };
+
+    handleDialogClose = () => {
+        this.setState({ dialogOpen: false });
+    };
 
     eductations = [
         {
             institution: "Belvedere College SJ",
             years: "Sept 2004 - Jun 2010",
             description: "School in Dublin inner city",
-            image: Belvedere
+            image: Belvedere,
+            elaboration:
+                "belvedere school was attended and satisfactory grades were received"
         },
         {
             institution: "Trinity College Dublin",
             years: "Sept 2010 - Jun 2015",
             description: "Natural Sciences Degree",
-            image: TCD
+            image: TCD,
+            elaboration:
+                "undergraduate was a period of great excitement and optimism"
         },
         {
             institution: "University College Dublin",
             years: "Sept 2015 - Jun 2016",
             description: "MSc Biotech & Business",
-            image: UCD
+            image: UCD,
+            elaboration: "money and time was spent here"
         }
     ];
 
     render() {
         const { classes } = this.props;
-        console.log(this.eductations)
+        const { dialogOpen, selectedInst, selectedElab } = this.state;
         return (
             <div className={classes.holder}>
                 {this.eductations.map(e => {
                     return (
                         <Card className={classes.card} key={e.institution}>
-                            <CardActionArea>
+                            <CardActionArea
+                                disableRipple={true}
+                                disableTouchRipple={true}
+                            >
                                 <CardMedia
                                     component="img"
-                                    alt="Contemplative Reptile"
+                                    alt={e.institution}
                                     className={classes.media}
                                     height="140"
                                     image={e.image}
-                                    title="Contemplative Reptile"
+                                    title={e.institution}
                                 />
                                 <CardContent>
                                     <Typography
@@ -91,24 +114,31 @@ class SchoolSection extends Component {
                                 </CardContent>
                             </CardActionArea>
                             <CardActions>
-                                <Button size="small" color="primary">
+                                <Button
+                                    size="small"
+                                    color="primary"
+                                    onClick={() =>
+                                        this.handleDialogOpen(
+                                            e.institution,
+                                            e.elaboration
+                                        )
+                                    }
+                                >
                                     Learn More
                                 </Button>
                             </CardActions>
                         </Card>
                     );
                 })}
+                <Dialog
+                    open={dialogOpen}
+                    handleClose={() => this.handleDialogClose()}
+                    inst={selectedInst}
+                    elab={selectedElab}
+                />
             </div>
         );
     }
-
-    componentDidMount() {}
-
-    componentDidUpdate(prevProps, prevState) {}
-
-    componentWillUnmount() {}
-
-    componentDidCatch(error, info) {}
 }
 
 const styledComponent = withStyles(styles, { withTheme: true })(SchoolSection);

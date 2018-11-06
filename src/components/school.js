@@ -17,10 +17,10 @@ const styles = theme => ({
     holder: {
         display: 'flex',
         flexWrap: 'wrap',
-        padding: '8px'
+        justifyContent: 'space-around'
     },
     card: {
-        maxWidth: 345,
+        maxWidth: 270,
         margin: '8px'
     },
     media: {

@@ -5,8 +5,20 @@ import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import AppBar from "@material-ui/core/AppBar";
+import Typography from "@material-ui/core/Typography";
+import SwipeableViews from "react-swipeable-views";
 import PropTypes from "prop-types";
 import ME from "../sdford.jpg";
+
+import School from "./school";
+
+function TabContainer({ children, dir }) {
+    return (
+        <Typography component="div" dir={dir} style={{ padding: 8 * 3 }}>
+            {children}
+        </Typography>
+    );
+}
 
 const styles = theme => ({
     root: {
@@ -41,7 +53,7 @@ const styles = theme => ({
         position: "-webkit-sticky",
         position: "sticky",
         top: 0,
-        zIndex: '999'
+        zIndex: "999"
     },
     tab: {
         width: "100px"
@@ -50,15 +62,16 @@ const styles = theme => ({
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
-        fontSize: "72px",
         [theme.breakpoints.down("sm")]: {
             flex: "1",
-            alignItems: "center"
+            alignItems: "center",
+            fontSize: "48px"
         },
         [theme.breakpoints.up("sm")]: {
             flex: "1",
             maxWidth: "340px",
-            alignItems: "flex-start"
+            alignItems: "flex-start",
+            fontSize: "72px"
         }
     }
 });
@@ -79,8 +92,12 @@ class Header extends Component {
         this.setState({ value });
     };
 
+    handleChangeIndex = index => {
+        this.setState({ value: index });
+    };
+
     render() {
-        const { classes } = this.props;
+        const { classes, theme } = this.props;
         return (
             <div className={classes.root}>
                 <div className={classes.headImage}>
@@ -103,6 +120,19 @@ class Header extends Component {
                         <Tab className={classes.tab} label="Projects" />
                     </Tabs>
                 </Paper>
+                <SwipeableViews
+                    axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+                    index={this.state.value}
+                    onChangeIndex={this.handleChangeIndex}
+                >
+                    <TabContainer dir={theme.direction}>
+                        <School />
+                    </TabContainer>
+                    <TabContainer dir={theme.direction}>Item Two</TabContainer>
+                    <TabContainer dir={theme.direction}>
+                        Item Three
+                    </TabContainer>
+                </SwipeableViews>
             </div>
         );
     }

@@ -13,6 +13,8 @@ import ME from "../sdford.jpg";
 import School from "./school";
 import Work from "./work";
 import Projects from "./projects";
+import Profile from "./profile";
+import Skills from "./skills";
 
 function TabContainer({ children, dir }) {
     return (
@@ -117,9 +119,11 @@ class Header extends Component {
                         centered
                         fullWidth={!isWidthUp("sm", this.props.width)}
                     >
+                        <Tab className={classes.tab} label="Profile" />
                         <Tab className={classes.tab} label="Schools" />
                         <Tab className={classes.tab} label="Work" />
                         <Tab className={classes.tab} label="Projects" />
+                        <Tab className={classes.tab} label="Skills" />
                     </Tabs>
                 </Paper>
                 <SwipeableViews
@@ -128,6 +132,9 @@ class Header extends Component {
                     onChangeIndex={this.handleChangeIndex}
                 >
                     <TabContainer dir={theme.direction}>
+                        <Profile />
+                    </TabContainer>
+                    <TabContainer dir={theme.direction}>
                         <School />
                     </TabContainer>
                     <TabContainer dir={theme.direction}>
@@ -135,6 +142,9 @@ class Header extends Component {
                     </TabContainer>
                     <TabContainer dir={theme.direction}>
                         <Projects />
+                    </TabContainer>
+                    <TabContainer dir={theme.direction}>
+                        <Skills />
                     </TabContainer>
                 </SwipeableViews>
             </div>

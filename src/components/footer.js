@@ -8,7 +8,7 @@ const styles = theme => ({
         justifyContent: 'space-around',
         flexWrap: 'wrap',
         padding: '16px',
-        borderTop: '1px solid black',
+        //borderTop: '1px solid black',
     },
     message: {
         flex: '0 1 340px',
@@ -38,7 +38,7 @@ function footer(props) {
     const { classes, theme } = props;
     console.log(theme)
     return (
-        <Paper className={classes.root}>
+        <Paper className={classes.root} elevation={4}>
             <div className={classes.message}>
                 Thank you for visiting my profile. If you would like to get in
                 touch here are some deets.

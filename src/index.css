@@ -15,10 +15,10 @@ code {
 
 .fancyText {
 	font-weight: bolder;
-	font-family: 'Spicy Rice', cursive;
+	font-family: 'Titillium Web', sans-serif;
 	color: black;
 	-webkit-text-fill-color: white; /* Will override color (regardless of order) */
-	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: black;
 	letter-spacing: 5px;
 }

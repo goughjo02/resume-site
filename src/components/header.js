@@ -46,17 +46,18 @@ const styles = theme => ({
         width: "100px"
     },
     text: {
-        flex: "0 1 300px",
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         fontSize: "72px",
         [theme.breakpoints.down("sm")]: {
             flex: "1",
-            alignItems: 'center'
+            alignItems: "center"
         },
         [theme.breakpoints.up("sm")]: {
-            flex: "0 1 300px"
+            flex: "1",
+            maxWidth: "340px",
+            alignItems: "flex-start"
         }
     }
 });

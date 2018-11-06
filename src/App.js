@@ -6,6 +6,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import "typeface-roboto";
 
 import Header from "./components/header";
+import School from "./components/school";
 
 const theme = createMuiTheme({
   palette: {
@@ -31,8 +32,7 @@ class App extends Component {
         <CssBaseline />
         <MuiThemeProvider theme={theme}>
           <Header />
-          <div style={{height: '100vh', width: '100vw'}}>
-          </div>
+          <School />
         </MuiThemeProvider>
       </Fragment>
     );

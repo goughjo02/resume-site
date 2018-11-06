@@ -40,7 +40,8 @@ const styles = theme => ({
         flexGrow: 1,
         position: "-webkit-sticky",
         position: "sticky",
-        top: 0
+        top: 0,
+        zIndex: '999'
     },
     tab: {
         width: "100px"

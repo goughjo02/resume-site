@@ -11,6 +11,7 @@ import PropTypes from "prop-types";
 import ME from "../sdford.jpg";
 
 import School from "./school";
+import Work from "./work";
 
 function TabContainer({ children, dir }) {
     return (
@@ -115,7 +116,7 @@ class Header extends Component {
                         centered
                         fullWidth={!isWidthUp("sm", this.props.width)}
                     >
-                        <Tab className={classes.tab} label="School" />
+                        <Tab className={classes.tab} label="Schools" />
                         <Tab className={classes.tab} label="Work" />
                         <Tab className={classes.tab} label="Projects" />
                     </Tabs>
@@ -128,7 +129,9 @@ class Header extends Component {
                     <TabContainer dir={theme.direction}>
                         <School />
                     </TabContainer>
-                    <TabContainer dir={theme.direction}>Item Two</TabContainer>
+                    <TabContainer dir={theme.direction}>
+                        <Work />
+                    </TabContainer>
                     <TabContainer dir={theme.direction}>
                         Item Three
                     </TabContainer>

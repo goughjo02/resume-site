@@ -11,6 +11,7 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import StarIcon from "@material-ui/icons/Star";
+import Divider from "@material-ui/core/Divider";
 
 const styles = theme => ({
     root: {
@@ -22,8 +23,11 @@ const styles = theme => ({
     }
 });
 
-function SkillsSection(props) {
-    const skills = [
+class SkillsSection extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    skills = [
         {
             title: "Web Technologies",
             skills: [
@@ -43,16 +47,13 @@ function SkillsSection(props) {
                     title: "Data Visualisation / D3"
                 },
                 {
-                    title: "C# / .NET"
+                    title: "C# / .NET / IIS"
                 },
                 {
-                    title: "Python Flask / Django"
+                    title: "Python Flask / uWSGI / Django"
                 },
                 {
-                    title: "linux"
-                },
-                {
-                    title: "NGINX"
+                    title: "linux / NGINX"
                 }
             ]
         },
@@ -66,7 +67,7 @@ function SkillsSection(props) {
                     title: "Python GPIO / PyQtGraph"
                 },
                 {
-                    title: "Linux"
+                    title: "Linux / systemd"
                 }
             ]
         },
@@ -117,29 +118,43 @@ function SkillsSection(props) {
             ]
         }
     ];
-    const { classes } = props;
-    return (
-        <div className={classes.root}>
-            {skills.map(e => {
-                return (
-                    <ExpansionPanel key={e.title}>
-                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                            <Typography className={classes.heading}>
-                                {e.title}
-                            </Typography>
-                        </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
-                            <div>
-                                {e.skills.map(f => {
-                                    return <div key={f.title}>{f.title}</div>;
-                                })}
-                            </div>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                );
-            })}
-        </div>
-    );
+    render() {
+        const { classes } = this.props;
+        return (
+            <div className={classes.root}>
+                {this.skills.map(e => {
+                    return (
+                        <ExpansionPanel key={e.title}>
+                            <ExpansionPanelSummary
+                                expandIcon={<ExpandMoreIcon />}
+                            >
+                                <Typography className={classes.heading}>
+                                    {e.title}
+                                </Typography>
+                            </ExpansionPanelSummary>
+                            <ExpansionPanelDetails id={`details${e.title}`}>
+                                <List>
+                                    {e.skills.map(f => {
+                                        return (
+                                            <React.Fragment>
+                                                <ListItem key={f.title}>
+                                                    <ListItemText
+                                                        primary={f.title}
+                                                    />
+                                                </ListItem>
+                                                <Divider />
+                                            </React.Fragment>
+                                        );
+                                    })}
+                                </List>
+                                <Divider />
+                            </ExpansionPanelDetails>
+                        </ExpansionPanel>
+                    );
+                })}
+            </div>
+        );
+    }
 }
 
 SkillsSection.propTypes = {

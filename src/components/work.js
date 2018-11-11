@@ -107,7 +107,7 @@ class WorkSection extends Component {
                 During my time here I processed a very high volume of assets, for which I leveraged \
                 the power of data analysis software to deliver impactful reports and strategise processes \
                 to meet KPIs. This was a highly regulated role, involving high stakes, where thorough \
-                research and understnding of content was paramount."
+                research and understanding of content was paramount."
         }
     ];
 

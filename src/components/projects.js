@@ -110,7 +110,7 @@ class ProjectsSection extends Component {
                 we made a large push for funding to fund the organisations micro-financing project. \
                 I was heavily involved in the writing of funding applications and we \
                 had a remarkably high success rate, receiving funding from The RTE One World Fund \
-                and The UDG Healthcare CSR Fund, amongst many others. From this we received enough seed funding \
+                and The UDG Healthcare CSR Fund, and many others. From this we received enough seed funding \
                 to begin the micro-finance project which initiated early in 2018 when participants received their \
                 first micro-financing loans."
         }

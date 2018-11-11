@@ -81,7 +81,7 @@ class profileSection extends Component {
                         Hello, my name is Joey Gough, I am a web developer, a
                         data-scientist, a creator, and an explorer. In the past
                         I have worked on a variety of different projects,
-                        ranging from academic research to developing engineering
+                        ranging from academic scientific research to developing engineering
                         and IoT solutions. I am ambitious and hard-working. With
                         a thirst for understanding and an enterprising
                         personality, I am always looking for new and exciting

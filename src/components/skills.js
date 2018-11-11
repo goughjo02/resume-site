@@ -105,6 +105,9 @@ class SkillsSection extends React.Component {
                 },
                 {
                     title: "Electronic Circuit design"
+                },
+                {
+                    title: "Sensor Applications"
                 }
             ]
         },
@@ -126,7 +129,7 @@ class SkillsSection extends React.Component {
             ]
         },
         {
-            title: "Biological Techniques",
+            title: "Laboratory Techniques",
             skills: [
                 {
                     title: "Dissection"

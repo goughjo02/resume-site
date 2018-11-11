@@ -47,6 +47,9 @@ class SkillsSection extends React.Component {
                     title: "Data Visualisation / D3"
                 },
                 {
+                    title: "SQL"
+                },
+                {
                     title: "C# / .NET / IIS"
                 },
                 {

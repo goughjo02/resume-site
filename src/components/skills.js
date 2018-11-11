@@ -68,20 +68,9 @@ class SkillsSection extends React.Component {
                 },
                 {
                     title: "SEO"
-                }
-            ]
-        },
-        {
-            title: "Engineering / Embedded Technologies",
-            skills: [
-                {
-                    title: "C++ / Arduino"
                 },
                 {
-                    title: "Python GPIO / PyQtGraph"
-                },
-                {
-                    title: "Linux / systemd"
+                    title: "Server Side Rendering"
                 }
             ]
         },
@@ -103,6 +92,23 @@ class SkillsSection extends React.Component {
             ]
         },
         {
+            title: "Engineering / Embedded Technologies",
+            skills: [
+                {
+                    title: "C++ / Arduino"
+                },
+                {
+                    title: "Python GPIO / PyQtGraph"
+                },
+                {
+                    title: "Linux / systemd"
+                },
+                {
+                    title: "Electronic Circuit design"
+                }
+            ]
+        },
+        {
             title: "Statistics",
             skills: [
                 {
@@ -120,7 +126,7 @@ class SkillsSection extends React.Component {
             ]
         },
         {
-            title: "Biological Laboratory",
+            title: "Biological Techniques",
             skills: [
                 {
                     title: "Dissection"
@@ -141,10 +147,7 @@ class SkillsSection extends React.Component {
                     title: "Microscopy (fluorescent)"
                 },
                 {
-                    title: "Column Chromatography"
-                },
-                {
-                    title: "Bioreactor / Clean Room tech"
+                    title: "Chromatography"
                 }
             ]
         }

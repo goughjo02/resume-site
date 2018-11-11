@@ -78,7 +78,7 @@ class WorkSection extends Component {
             elaboration:
                 "As co-director and product engineer at Peaceful Programming \
                 I had several small projects (websites, simple libraries) \
-                and had one large project. The large project, which recently finished (March 2018), \
+                and I had one large project. The large project, which recently finished (March 2018), \
                 involved the construction of a remote data acquisition system, \
                 with realtime data visualization. Technologies used include Python, Elixir Phoenix, \
                 ReactJs, and C++/Arduino"
@@ -89,9 +89,9 @@ class WorkSection extends Component {
             description: "Web Developer",
             image: Initiafy,
             elaboration:
-                "Initiafy is an online CRM, which provides services for the pharmaceutical \
-                and heavy industries. At initiafy, I provide technical support for the current product. \
-                The majority of my time is spent on development on the planned sucessor to the curent product. \
+                "Initiafy is an online contractor management software, which provides services primarily for the pharmaceutical \
+                and construction industries. At initiafy, I provide technical support for the current product. \
+                The majority of my time is spent on development on the planned sucessor to the curent platform. \
                 This is a .NET stack and the majority of my time is spent working on the development of an \
                 SPA built with the latest version of Angular."
         },

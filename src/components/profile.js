@@ -21,20 +21,28 @@ const styles = theme => {
         },
         textHolder: {
             display: "flex",
+            //flexWrap: 'wrap',
+            flexDirection: 'column',
             width: "100%",
             justifyContent: "center",
-            alignItems: "center"
+            alignItems: "center",
+            paddingTop: '8px',
+            paddingBottom: '8px'
         },
         title: {
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center',
-            flex: "0 1 300px",
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            flex: "0 1 300px"
         },
         text: {
-            //maxWidh: "300px",
-            flex: "0 1 500px",
-            textAlign: 'justify'
+            maxWidth: "500px",
+            alignSelf: 'stretch',
+            margin: 'auto',
+            //flex: "0 1 500px",
+            textAlign: "justify",
+            paddingTop: '8px',
+            paddingBottom: '8px'
         }
     };
 };
@@ -52,20 +60,20 @@ class profileSection extends Component {
         // TODO: fix this magic number
         if (topParent > 278) {
             document.getElementById("profile").scrollIntoView(true);
-            window.scrollBy(0, -48);
+            window.scrollBy(0, -64);
         }
     };
 
     render() {
         const { classes } = this.props;
         return (
-            <div id='profile'>
+            <div id="profile">
                 <div className={classes.top}>
-                <div className={classes.title}>
-                    <h3>Joey Gough</h3>
-                    <div className={classes.imageHolder}>
-                        <img src={ME} height={"100%"} width="autp" />
-                    </div>
+                    <div className={classes.title}>
+                        <h3>Joey Gough</h3>
+                        <div className={classes.imageHolder}>
+                            <img src={ME} height={"100%"} width="autp" />
+                        </div>
                     </div>
                 </div>
                 <div className={classes.textHolder}>
@@ -73,16 +81,16 @@ class profileSection extends Component {
                         Hello, my name is Joey Gough, I am a web developer, a
                         data-scientist, a creator, and an explorer. In the past
                         I have worked on a variety of different projects,
-                        ranging from scientific and academic research to
-                        developing engineering and IoT solutions. I am ambitious
-                        and hard-working individual, with a thirst for
-                        understanding and an enterprising personality. I am
-                        always looking for new and exciting opportunities and as
-                        such I like to maintain this personal website as a sort
-                        of stand-in resume, a reference of my
-                        experience, and an advertisement of my skills,
-                        personality, and interests. Thank you for taking the
-                        time to visit my site. Please feel free to get in touch.
+                        ranging from academic research to developing engineering
+                        and IoT solutions. I am ambitious and hard-working. With
+                        a thirst for understanding and an enterprising
+                        personality, I am always looking for new and exciting
+                        opportunities.{" "}
+                    </p>
+                    <p className={classes.text}>
+                        {" "}
+                        I maintain this personal website to serve as a resume.
+                        Thank you for visiting my site. Please get in touch.
                     </p>
                 </div>
             </div>

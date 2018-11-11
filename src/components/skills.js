@@ -89,13 +89,13 @@ class SkillsSection extends React.Component {
             ]
         },
         {
-            title: "Laboratory",
+            title: "Biological Laboratory",
             skills: [
                 {
                     title: "Dissection"
                 },
                 {
-                    title: "Biological Sample Husbandary"
+                    title: "Sample Husbandary"
                 },
                 {
                     title: "Parafin Wax Embedding"
@@ -113,7 +113,7 @@ class SkillsSection extends React.Component {
                     title: "Column Chromatography"
                 },
                 {
-                    title: "Bioreactor Maintenance"
+                    title: "Bioreactor / Clean Room tech"
                 }
             ]
         }

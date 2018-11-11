@@ -75,7 +75,7 @@ class SchoolSection extends Component {
                 "During my time in Belvedere, \
                 my study focused primarily in Mathematics \
                 (inlcuding Applied Mathematics) and various \
-                scientific subjects (including Chemistry and Biology). My extra-curricular \
+                scientific subjects (including Chemistry and Biology). I also studied French, German, and Latin. My extra-curricular \
                 activites included stage-crew for \
                 the dramatic society, playing rugby, \
                 the mathematics club and film club"
@@ -101,8 +101,8 @@ class SchoolSection extends Component {
                 aspects of technology development, \
                 inluding marketing, corporate finance, \
                 regulatory affairs, and technology development processes, such as \
-                management sciences, organisational behvaiour, \
-                mergers and collaborations, and team-work excercises. \
+                management science, organisational behvaiour, \
+                mergers, acquisitions, and collaborations, and team-work excercises. \
                 As part of this course, I also performed practical studies \
                 in NIBRT, the national institutes for biological research and training, \
                 where I studied industrial techniques in the area of biotechnology. "

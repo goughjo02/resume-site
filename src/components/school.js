@@ -91,7 +91,10 @@ class SchoolSection extends Component {
                 inluding marketing, corporate finance, \
                 regulatory affairs, and technology development processes, such as \
                 management sciences, organisational behvaiour, \
-                mergers and collaborations, and team-work excercises. "
+                mergers and collaborations, and team-work excercises. \
+                As part of this course, I also performed practical studies \
+                in NIBRT, the national institutes for biological research and training, \
+                where I studied industrial techniques in the area of biotechnology. "
         }
     ];
 

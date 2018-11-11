@@ -64,22 +64,39 @@ class WorkSection extends Component {
             years: "Jan 2017 - Dec 2017",
             description: "Case Executive",
             image: AIB,
-            elaboration: "managed accounts and data flow"
+            elaboration: 
+                "Positioned in a highly regulated aspect of financial affairs, my \
+                role involed the processing of indiviudual cases in line with company \
+                policy and the regulatory framework that concerned the nature of the work. \
+                During my time here I processed a very high volume of assets, for which I leveraged \
+                the power of data analysis software to deliver impactful reports and strategise processes \
+                to meet KPIs. This was a highly regulated role, involving high stakes, where thorough \
+                research and understnding of content was paramount."
         },
         {
             institution: "Peaceful Programming",
             years: "Jam 2018 - May 2018",
-            description: "Director",
+            description: "Product Engineer",
             image: PP,
             elaboration:
-                "Peaceful Programming is my company. I have had several small projects (websites, simple libraries) and one large project. The large project recently finished (March 2018). It involved the construction of a remote data acquisition system, with realtime data visualization. Technologies used - Python, Elixir Phoenix, ReactJs, C++/Arduino"
+                "As co-director and product engineer at Peaceful Programming \
+                I had several small projects (websites, simple libraries) \
+                and had one large project. The large project, which recently finished (March 2018), \
+                involved the construction of a remote data acquisition system, \
+                with realtime data visualization. Technologies used include Python, Elixir Phoenix, \
+                ReactJs, and C++/Arduino"
         },
         {
             institution: "Initiafy",
             years: "June 2018 - Present",
             description: "Web Developer",
             image: Initiafy,
-            elaboration: "Production of an enterprise web platform"
+            elaboration: 
+                "Initiafy is an online CRM, which provides services for the pharmaceutical \
+                and heavy industries. At initiafy, I provide technical support for the current product. \
+                The majority of my time is spent on development on the planned sucessor to the curent product. \
+                This is a .NET stack and the majority of my time is spent working on the development of an \
+                SPA built with the latest version of Angular."
         }
     ];
 

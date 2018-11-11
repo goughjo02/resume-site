@@ -23,41 +23,27 @@ const styles = theme => ({
 });
 
 function SkillsSection(props) {
-    const scientific = [
+    const webTechnologies = [
         {
-            title: "histology"
+            title: "HTML5 / CSS3 / Javascript"
         },
         {
-            title: "immunohistochemistry"
+            title: "ReactJS / Redux"
         },
         {
-            title: "microscopy"
+            title: "Angular 7"
         },
         {
-            title: "dissection"
+            title: "Websockets / RESTful APIs"
         },
         {
-            title: "sample husbandary"
+            title: "Data Visualisation / D3"
         },
         {
-            title: "data analysis"
+            title: "C# / .NET"
         },
         {
-            title: 'statistics'
-        }
-    ];
-    const engineering = [
-        {
-            title: "c/c++ embedded"
-        },
-        {
-            title: "python"
-        },
-        {
-            title: "javascript"
-        },
-        {
-            title: ".NET"
+            title: "Python Flask / Django"
         },
         {
             title: "linux"
@@ -65,14 +51,56 @@ function SkillsSection(props) {
         {
             title: "NGINX"
         },
+    ]
+    const embedded = [
         {
-            title: "css"
+            title: "C++ / Arduino"
         },
         {
-            title: "electronics"
+            title: "Python GPIO / PyQtGraph"
         },
         {
-            title: "applied mathematics"
+            title: "Linux"
+        },
+    ]
+    const statistics = [
+        {
+            title: "R"
+        },
+        {
+            title: "Python Numpy / Pandas"
+        },
+        {
+            title: "Applied Mathematics"
+        },
+        {
+            title: "Excel"
+        }
+    ];
+    const laboratory = [
+        {
+            title: "Dissection"
+        },
+        {
+            title: "Biological Sample Husbandary"
+        },
+        {
+            title: "Parafin Wax Embeddin"
+        },
+        {
+            title: "Microtome Sectioning"
+        },
+        {
+            title: "Histology / Immunohistochemistry"
+        },
+        {
+            title: "Microscopy (fluorescent)"
+        },
+        {
+            title: "Chromatography"
+        },
+        {
+            title: "Bioreactor Maintenance"
         }
     ];
     const { classes } = props;
@@ -81,12 +109,12 @@ function SkillsSection(props) {
             <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                     <Typography className={classes.heading}>
-                        Laboratory
+                        Web Technologies
                     </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <div>
-                        {scientific.map(e => {
+                        {webTechnologies.map(e => {
                             return <div>{e.title}</div>;
                         })}
                     </div>
@@ -95,12 +123,40 @@ function SkillsSection(props) {
             <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                     <Typography className={classes.heading}>
-                        Engineering / Programming
+                        Engineering / Embedded Technologies
                     </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>
                     <div>
-                        {engineering.map(e => {
+                        {embedded.map(e => {
+                            return <div>{e.title}</div>;
+                        })}
+                    </div>
+                </ExpansionPanelDetails>
+            </ExpansionPanel>
+            <ExpansionPanel>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography className={classes.heading}>
+                        Statistics
+                    </Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                    <div>
+                        {statistics.map(e => {
+                            return <div>{e.title}</div>;
+                        })}
+                    </div>
+                </ExpansionPanelDetails>
+            </ExpansionPanel>
+            <ExpansionPanel>
+                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                    <Typography className={classes.heading}>
+                        Scientific Laboratory
+                    </Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails>
+                    <div>
+                        {laboratory.map(e => {
                             return <div>{e.title}</div>;
                         })}
                     </div>

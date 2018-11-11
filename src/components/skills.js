@@ -32,7 +32,7 @@ class SkillsSection extends React.Component {
             title: "Web Technologies",
             skills: [
                 {
-                    title: "HTML5 / CSS3 / Javascript"
+                    title: "HTML5 / CSS3 / Javascript (ECMAScript 6 )"
                 },
                 {
                     title: "ReactJS / Redux"
@@ -96,6 +96,9 @@ class SkillsSection extends React.Component {
                 },
                 {
                     title: "Writing human-readable code"
+                },
+                {
+                    title: "Git"
                 }
             ]
         },

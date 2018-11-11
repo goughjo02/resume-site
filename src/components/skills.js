@@ -58,6 +58,20 @@ class SkillsSection extends React.Component {
             ]
         },
         {
+            title: "Web Techniques",
+            skills: [
+                {
+                    title: "Internationalization and localisation"
+                },
+                {
+                    title: "Lazy Loading / Code Splitting"
+                },
+                {
+                    title: "SEO"
+                }
+            ]
+        },
+        {
             title: "Engineering / Embedded Technologies",
             skills: [
                 {
@@ -68,6 +82,20 @@ class SkillsSection extends React.Component {
                 },
                 {
                     title: "Linux / systemd"
+                }
+            ]
+        },
+        {
+            title: "Programming Techniques",
+            skills: [
+                {
+                    title: "Creating standalone reusable code"
+                },
+                {
+                    title: "DRY (don't repeat yourself)"
+                },
+                {
+                    title: "Writing human-readable code"
                 }
             ]
         },
@@ -137,12 +165,12 @@ class SkillsSection extends React.Component {
                                     {e.skills.map(f => {
                                         return (
                                             <React.Fragment>
+                                                <Divider />
                                                 <ListItem key={f.title}>
                                                     <ListItemText
                                                         primary={f.title}
                                                     />
                                                 </ListItem>
-                                                <Divider />
                                             </React.Fragment>
                                         );
                                     })}

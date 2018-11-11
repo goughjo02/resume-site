@@ -42,7 +42,6 @@ class SchoolSection extends Component {
     }
 
     handleDialogOpen = (inst, elab) => {
-        console.log("trying to open");
         this.setState({
             dialogOpen: true,
             selectedInst: inst,
@@ -52,6 +51,18 @@ class SchoolSection extends Component {
 
     handleDialogClose = () => {
         this.setState({ dialogOpen: false });
+    };
+
+    componentDidMount = () => {
+        // const topRect = document
+        //     .getElementById("tabBar")
+        //     .getBoundingClientRect().top;
+        const topParent = window.scrollY;
+        // TODO: fix this magic number
+        if (topParent > 278) {
+            document.getElementById("school").scrollIntoView(true);
+            window.scrollBy(0, -48);
+        }
     };
 
     eductations = [
@@ -85,7 +96,7 @@ class SchoolSection extends Component {
             years: "Sept 2015 - Jun 2016",
             description: "MSc Biotech & Business",
             image: UCD,
-            elaboration: 
+            elaboration:
                 "This course focused primarily on commercial \
                 aspects of technology development, \
                 inluding marketing, corporate finance, \
@@ -102,13 +113,19 @@ class SchoolSection extends Component {
         const { classes } = this.props;
         const { dialogOpen, selectedInst, selectedElab } = this.state;
         return (
-            <div className={classes.holder}>
+            <div className={classes.holder} id="school">
                 {this.eductations.map(e => {
                     return (
                         <Card className={classes.card} key={e.institution}>
                             <CardActionArea
                                 disableRipple={true}
                                 disableTouchRipple={true}
+                                onClick={() =>
+                                    this.handleDialogOpen(
+                                        e.institution,
+                                        e.elaboration
+                                    )
+                                }
                             >
                                 <CardMedia
                                     component="img"
@@ -125,6 +142,9 @@ class SchoolSection extends Component {
                                         component="h2"
                                     >
                                         {e.institution}
+                                    </Typography>
+                                    <Typography gutterBottom component="p">
+                                        {e.years}
                                     </Typography>
                                     <Typography component="p">
                                         {e.description}

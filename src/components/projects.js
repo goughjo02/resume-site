@@ -41,8 +41,19 @@ class ProjectsSection extends Component {
         };
     }
 
+    componentDidMount = () => {
+        // const topRect = document
+        //     .getElementById("tabBar")
+        //     .getBoundingClientRect().top;
+        const topParent = window.scrollY;
+        // TODO: fix this magic number
+        if (topParent > 278) {
+            document.getElementById("projects").scrollIntoView(true);
+            window.scrollBy(0, -48);
+        }
+    };
+
     handleDialogOpen = (inst, elab) => {
-        console.log("trying to open");
         this.setState({
             dialogOpen: true,
             selectedInst: inst,
@@ -109,13 +120,19 @@ class ProjectsSection extends Component {
         const { classes } = this.props;
         const { dialogOpen, selectedInst, selectedElab } = this.state;
         return (
-            <div className={classes.holder}>
+            <div className={classes.holder} id='projects'>
                 {this.eductations.map(e => {
                     return (
                         <Card className={classes.card} key={e.institution}>
                             <CardActionArea
                                 disableRipple={true}
                                 disableTouchRipple={true}
+                                onClick={() =>
+                                        this.handleDialogOpen(
+                                            e.institution,
+                                            e.elaboration
+                                        )
+                                    }
                             >
                                 <CardMedia
                                     component="img"
@@ -132,6 +149,12 @@ class ProjectsSection extends Component {
                                         component="h2"
                                     >
                                         {e.institution}
+                                    </Typography>
+                                    <Typography
+                                        gutterBottom
+                                        component="p"
+                                    >
+                                        {e.years}
                                     </Typography>
                                     <Typography component="p">
                                         {e.description}

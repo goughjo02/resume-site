@@ -44,10 +44,22 @@ class profileSection extends Component {
         this.state = {};
     }
 
+    componentDidMount = () => {
+        // const topRect = document
+        //     .getElementById("tabBar")
+        //     .getBoundingClientRect().top;
+        const topParent = window.scrollY;
+        // TODO: fix this magic number
+        if (topParent > 278) {
+            document.getElementById("profile").scrollIntoView(true);
+            window.scrollBy(0, -48);
+        }
+    };
+
     render() {
         const { classes } = this.props;
         return (
-            <div>
+            <div id='profile'>
                 <div className={classes.top}>
                 <div className={classes.title}>
                     <h3>Joey Gough</h3>
@@ -56,8 +68,8 @@ class profileSection extends Component {
                     </div>
                     </div>
                 </div>
-                <div class={classes.textHolder}>
-                    <p class={classes.text}>
+                <div className={classes.textHolder}>
+                    <p className={classes.text}>
                         Hello, my name is Joey Gough, I am a web developer, a
                         data-scientist, a creator, and an explorer. In the past
                         I have worked on a variety of different projects,
@@ -67,7 +79,7 @@ class profileSection extends Component {
                         understanding and an enterprising personality. I am
                         always looking for new and exciting opportunities and as
                         such I like to maintain this personal website as a sort
-                        of stand-in resume, an up-to-date reference of my
+                        of stand-in resume, a reference of my
                         experience, and an advertisement of my skills,
                         personality, and interests. Thank you for taking the
                         time to visit my site. Please feel free to get in touch.

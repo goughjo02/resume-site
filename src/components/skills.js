@@ -85,7 +85,7 @@ function SkillsSection(props) {
             title: "Biological Sample Husbandary"
         },
         {
-            title: "Parafin Wax Embeddin"
+            title: "Parafin Wax Embedding"
         },
         {
             title: "Microtome Sectioning"
@@ -97,7 +97,7 @@ function SkillsSection(props) {
             title: "Microscopy (fluorescent)"
         },
         {
-            title: "Chromatography"
+            title: "Column Chromatography"
         },
         {
             title: "Bioreactor Maintenance"
@@ -115,7 +115,7 @@ function SkillsSection(props) {
                 <ExpansionPanelDetails>
                     <div>
                         {webTechnologies.map(e => {
-                            return <div>{e.title}</div>;
+                            return <div key={e.title}>{e.title}</div>;
                         })}
                     </div>
                 </ExpansionPanelDetails>
@@ -129,7 +129,7 @@ function SkillsSection(props) {
                 <ExpansionPanelDetails>
                     <div>
                         {embedded.map(e => {
-                            return <div>{e.title}</div>;
+                            return <div key={e.title}>{e.title}</div>;
                         })}
                     </div>
                 </ExpansionPanelDetails>
@@ -143,7 +143,7 @@ function SkillsSection(props) {
                 <ExpansionPanelDetails>
                     <div>
                         {statistics.map(e => {
-                            return <div>{e.title}</div>;
+                            return <div key={e.title}>{e.title}</div>;
                         })}
                     </div>
                 </ExpansionPanelDetails>
@@ -157,21 +157,9 @@ function SkillsSection(props) {
                 <ExpansionPanelDetails>
                     <div>
                         {laboratory.map(e => {
-                            return <div>{e.title}</div>;
+                            return <div key={e.title}>{e.title}</div>;
                         })}
                     </div>
-                </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel>
-                <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography className={classes.heading}>Soft</Typography>
-                </ExpansionPanelSummary>
-                <ExpansionPanelDetails>
-                    <Typography>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Suspendisse malesuada lacus ex, sit amet blandit leo
-                        lobortis eget.
-                    </Typography>
                 </ExpansionPanelDetails>
             </ExpansionPanel>
         </div>

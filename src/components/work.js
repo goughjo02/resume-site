@@ -46,7 +46,6 @@ class WorkSection extends Component {
     }
 
     handleDialogOpen = (inst, elab) => {
-        console.log("trying to open");
         this.setState({
             dialogOpen: true,
             selectedInst: inst,
@@ -58,10 +57,22 @@ class WorkSection extends Component {
         this.setState({ dialogOpen: false });
     };
 
+    componentDidMount = () => {
+        // const topRect = document
+        //     .getElementById("tabBar")
+        //     .getBoundingClientRect().top;
+        const topParent = window.scrollY;
+        // TODO: fix this magic number
+        if (topParent > 278) {
+            document.getElementById("work").scrollIntoView(true);
+            window.scrollBy(0, -48);
+        }
+    };
+
     eductations = [
         {
             institution: "Grant Thornton",
-            years: "Jan 2017 - Dec 2017",
+            years: "Jan - Dec 2017",
             description: "Case Executive",
             image: AIB,
             elaboration: 
@@ -75,7 +86,7 @@ class WorkSection extends Component {
         },
         {
             institution: "Peaceful Programming",
-            years: "Jam 2018 - May 2018",
+            years: "Jan - May 2018",
             description: "Product Engineer",
             image: PP,
             elaboration:
@@ -104,13 +115,19 @@ class WorkSection extends Component {
         const { classes } = this.props;
         const { dialogOpen, selectedInst, selectedElab } = this.state;
         return (
-            <div className={classes.holder}>
+            <div className={classes.holder} id='work'>
                 {this.eductations.map(e => {
                     return (
                         <Card className={classes.card} key={e.institution}>
                             <CardActionArea
                                 disableRipple={true}
                                 disableTouchRipple={true}
+                                onClick={() =>
+                                        this.handleDialogOpen(
+                                            e.institution,
+                                            e.elaboration
+                                        )
+                                    }
                             >
                                 <CardMedia
                                     component="img"
@@ -131,6 +148,12 @@ class WorkSection extends Component {
                                         component="h2"
                                     >
                                         {e.institution}
+                                    </Typography>
+                                    <Typography
+                                        gutterBottom
+                                        component="p"
+                                    >
+                                        {e.years}
                                     </Typography>
                                     <Typography component="p">
                                         {e.description}

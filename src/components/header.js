@@ -102,24 +102,25 @@ class Header extends Component {
 
     render() {
         const { classes, theme } = this.props;
+        const { value } = this.state;
         return (
             <div className={classes.root}>
                 <div className={classes.headImage}>
-                    {// <div className={classes.text}>
-                    //     <div className={"fancyText"}>Creator</div>
-                    //     <div className={"fancyText"}>Explorer</div>
-                    // </div>
-                }
+                    {
+                        // <div className={classes.text}>
+                        //     <div className={"fancyText"}>Creator</div>
+                        //     <div className={"fancyText"}>Explorer</div>
+                        // </div>
+                    }
                 </div>
-                <Paper className={classes.appBar}>
+                <Paper className={classes.appBar} id='tabBar'>
                     <Tabs
                         value={this.state.value}
                         onChange={this.handleChange}
                         indicatorColor="primary"
                         textColor="primary"
-                        centered
+                        centered={isWidthUp("sm", this.props.width)}
                         scrollable={!isWidthUp("sm", this.props.width)}
-                        //fullWidth={!isWidthUp("sm", this.props.width)}
                     >
                         <Tab className={classes.tab} label="Profile" />
                         <Tab className={classes.tab} label="Education" />
@@ -128,27 +129,31 @@ class Header extends Component {
                         <Tab className={classes.tab} label="Skills" />
                     </Tabs>
                 </Paper>
-                <SwipeableViews
-                    axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-                    index={this.state.value}
-                    onChangeIndex={this.handleChangeIndex}
-                >
-                    <TabContainer dir={theme.direction}>
+                {value === 0 && (
+                    <TabContainer>
                         <Profile />
                     </TabContainer>
-                    <TabContainer dir={theme.direction}>
+                )}
+                {value === 1 && (
+                    <TabContainer>
                         <School />
                     </TabContainer>
-                    <TabContainer dir={theme.direction}>
+                )}
+                {value === 2 && (
+                    <TabContainer>
                         <Work />
                     </TabContainer>
-                    <TabContainer dir={theme.direction}>
+                )}
+                {value === 3 && (
+                    <TabContainer>
                         <Projects />
                     </TabContainer>
-                    <TabContainer dir={theme.direction}>
+                )}
+                {value === 4 && (
+                    <TabContainer>
                         <Skills />
                     </TabContainer>
-                </SwipeableViews>
+                )}
             </div>
         );
     }

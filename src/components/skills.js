@@ -171,8 +171,9 @@ class SkillsSection extends React.Component {
                             </ExpansionPanelSummary>
                             <ExpansionPanelDetails id={`details${e.title}`}>
                                 <List>
-                                    {e.skills.map(f => {
-                                        return (
+                                    {e.skills.map((f, i) => {
+                                        if ( i=== 0 ) {
+                                            return (
                                             <React.Fragment>
                                                 <Divider />
                                                 <ListItem key={f.title}>
@@ -180,8 +181,21 @@ class SkillsSection extends React.Component {
                                                         primary={f.title}
                                                     />
                                                 </ListItem>
+                                                <Divider />
                                             </React.Fragment>
                                         );
+                                        } else {
+                                        return (
+                                            <React.Fragment>
+                                                <ListItem key={f.title}>
+                                                    <ListItemText
+                                                        primary={f.title}
+                                                    />
+                                                </ListItem>
+                                                <Divider />
+                                            </React.Fragment>
+                                        );
+                                    }
                                     })}
                                 </List>
                                 <Divider />

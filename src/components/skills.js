@@ -41,6 +41,9 @@ class SkillsSection extends React.Component {
                     title: "Angular 7"
                 },
                 {
+                    title: "React Native"
+                },
+                {
                     title: "Websockets / RESTful APIs"
                 },
                 {
@@ -53,7 +56,7 @@ class SkillsSection extends React.Component {
                     title: "C# / .NET / IIS"
                 },
                 {
-                    title: "Python Flask / uWSGI / Django"
+                    title: "Python Flask / uWSGI"
                 },
                 {
                     title: "linux / NGINX"
@@ -138,10 +141,10 @@ class SkillsSection extends React.Component {
                     title: "Dissection"
                 },
                 {
-                    title: "Sample Husbandary"
+                    title: "Sample Husbandry"
                 },
                 {
-                    title: "Parafin Wax Embedding"
+                    title: "Paraffin Wax Embedding"
                 },
                 {
                     title: "Microtome Sectioning"

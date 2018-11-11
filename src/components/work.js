@@ -76,12 +76,7 @@ class WorkSection extends Component {
             description: "Product Engineer",
             image: PP,
             elaboration:
-                "As co-director and product engineer at Peaceful Programming \
-                I had several small projects (websites, simple libraries) \
-                and I had one large project. The large project, which recently finished (March 2018), \
-                involved the construction of a remote data acquisition system, \
-                with realtime data visualization. Technologies used include Python, Elixir Phoenix, \
-                ReactJs, and C++/Arduino"
+                "As co-director and product engineer at Peaceful Programming I had several small projects and one large project. The large project, which recently finished (March 2018), involved the construction of a bespoke remote data acquisition system for a novel wave energy technology. This product included a real time data visualization web dashboard. Technologies used included Python, Elixir Phoenix, ReactJs, and C++/Arduino."
         },
         {
             institution: "Initiafy",
@@ -89,11 +84,8 @@ class WorkSection extends Component {
             description: "Web Developer",
             image: Initiafy,
             elaboration:
-                "Initiafy is an online contractor management software, which provides services primarily for the pharmaceutical \
-                and construction industries. At initiafy, I provide technical support for the current product. \
-                The majority of my time is spent on development on the planned sucessor to the curent platform. \
-                This is a .NET stack and the majority of my time is spent working on the development of an \
-                SPA built with the latest version of Angular."
+                "Initiafy is an online contractor management software, which provides services primarily for the pharmaceutical and construction industries. At initiafy, I provide technical support for the current platform. The majority of my time is spent on developing an SPA, which is intended to  succeed the current platform. \
+                This is a .NET stack and the majority of my time is spent working with the latest version of Angular."
         },
         {
             institution: "Grant Thornton",
@@ -101,13 +93,7 @@ class WorkSection extends Component {
             description: "Case Executive",
             image: AIB,
             elaboration:
-                "Positioned in a highly regulated aspect of financial affairs, my \
-                role involed the processing of indiviudual cases in line with company \
-                policy and the regulatory framework that concerned the nature of the work. \
-                During my time here I processed a very high volume of assets, for which I leveraged \
-                the power of data analysis software to deliver impactful reports and strategise processes \
-                to meet KPIs. This was a highly regulated role, involving high stakes, where thorough \
-                research and understanding of content was paramount."
+                "Positioned in a highly regulated area of financial affairs, my role involved the processing of individual cases in line with company policy and the regulatory framework that surrounded them. During my time I processed a very high volume of assets, for which I leveraged the power of data analysis software to deliver impactful reports and strategise processes to meet KPIs. This was a highly regulated role, involving high stakes, where thorough research and understanding of content was paramount."
         }
     ];
 

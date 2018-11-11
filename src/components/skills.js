@@ -28,9 +28,6 @@ function SkillsSection(props) {
             title: "histology"
         },
         {
-            title: "organochemistry"
-        },
-        {
             title: "immunohistochemistry"
         },
         {
@@ -40,10 +37,10 @@ function SkillsSection(props) {
             title: "dissection"
         },
         {
-            title: "data analysis"
+            title: "sample husbandary"
         },
         {
-            title: "data management"
+            title: "data analysis"
         },
         {
             title: 'statistics'
@@ -84,7 +81,7 @@ function SkillsSection(props) {
             <ExpansionPanel>
                 <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
                     <Typography className={classes.heading}>
-                        Scientific
+                        Laboratory
                     </Typography>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails>

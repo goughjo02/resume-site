@@ -61,7 +61,13 @@ class SchoolSection extends Component {
             description: "School in Dublin inner city",
             image: Belvedere,
             elaboration:
-                "belvedere school was attended and satisfactory grades were received"
+                "During my time in Belvedere, \
+                my study focused primarily in Mathematics \
+                (inlcuding Applied Mathematics) and various \
+                scientific subjects (including Chemistry and Biology). My extra-curricular \
+                activites included stage-crew for \
+                the dramatic society, playing rugby, \
+                the mathematics club and film club"
         },
         {
             institution: "Trinity College Dublin",
@@ -69,14 +75,23 @@ class SchoolSection extends Component {
             description: "Natural Sciences Degree",
             image: TCD,
             elaboration:
-                "undergraduate was a period of great excitement and optimism"
+                "In my freshman years, my academic subjects were spread across Mathematics, Biology, and Chemistry.\
+                In my Sophister years, my studies focused broadly on Genetics, animal and plant Physiology, \
+                and Developmental Biology. This was amongst many other subjects including environemntal biology, \
+                chemical signalling in biological organisms, and comparitive studies of ubiquitous mechanisms in the biosphere."
         },
         {
             institution: "University College Dublin",
             years: "Sept 2015 - Jun 2016",
             description: "MSc Biotech & Business",
             image: UCD,
-            elaboration: "money and time was spent here"
+            elaboration: 
+                "This course focused primarily on commercial \
+                aspects of technology development, \
+                inluding marketing, corporate finance, \
+                regulatory affairs, and technology development processes, such as \
+                management sciences, organisational behvaiour, \
+                mergers and collaborations, and team-work excercises. "
         }
     ];
 

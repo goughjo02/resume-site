@@ -26,7 +26,7 @@ class ResponsiveDialog extends React.Component {
                     {inst}
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText>
+                    <DialogContentText align='justify'>
                         {elab}
                     </DialogContentText>
                 </DialogContent>

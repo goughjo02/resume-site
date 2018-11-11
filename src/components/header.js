@@ -105,10 +105,11 @@ class Header extends Component {
         return (
             <div className={classes.root}>
                 <div className={classes.headImage}>
-                    <div className={classes.text}>
-                        <div className={"fancyText"}>Creator</div>
-                        <div className={"fancyText"}>Explorer</div>
-                    </div>
+                    {// <div className={classes.text}>
+                    //     <div className={"fancyText"}>Creator</div>
+                    //     <div className={"fancyText"}>Explorer</div>
+                    // </div>
+                }
                 </div>
                 <Paper className={classes.appBar}>
                     <Tabs
@@ -120,8 +121,8 @@ class Header extends Component {
                         fullWidth={!isWidthUp("sm", this.props.width)}
                     >
                         <Tab className={classes.tab} label="Profile" />
-                        <Tab className={classes.tab} label="Schools" />
-                        <Tab className={classes.tab} label="Work" />
+                        <Tab className={classes.tab} label="Education" />
+                        <Tab className={classes.tab} label="Career" />
                         <Tab className={classes.tab} label="Projects" />
                         <Tab className={classes.tab} label="Skills" />
                     </Tabs>

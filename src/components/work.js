@@ -71,20 +71,6 @@ class WorkSection extends Component {
 
     eductations = [
         {
-            institution: "Grant Thornton",
-            years: "Jan - Dec 2017",
-            description: "Case Executive",
-            image: AIB,
-            elaboration: 
-                "Positioned in a highly regulated aspect of financial affairs, my \
-                role involed the processing of indiviudual cases in line with company \
-                policy and the regulatory framework that concerned the nature of the work. \
-                During my time here I processed a very high volume of assets, for which I leveraged \
-                the power of data analysis software to deliver impactful reports and strategise processes \
-                to meet KPIs. This was a highly regulated role, involving high stakes, where thorough \
-                research and understnding of content was paramount."
-        },
-        {
             institution: "Peaceful Programming",
             years: "Jan - May 2018",
             description: "Product Engineer",
@@ -102,12 +88,26 @@ class WorkSection extends Component {
             years: "June 2018 - Present",
             description: "Web Developer",
             image: Initiafy,
-            elaboration: 
+            elaboration:
                 "Initiafy is an online CRM, which provides services for the pharmaceutical \
                 and heavy industries. At initiafy, I provide technical support for the current product. \
                 The majority of my time is spent on development on the planned sucessor to the curent product. \
                 This is a .NET stack and the majority of my time is spent working on the development of an \
                 SPA built with the latest version of Angular."
+        },
+        {
+            institution: "Grant Thornton",
+            years: "Jan - Dec 2017",
+            description: "Case Executive",
+            image: AIB,
+            elaboration:
+                "Positioned in a highly regulated aspect of financial affairs, my \
+                role involed the processing of indiviudual cases in line with company \
+                policy and the regulatory framework that concerned the nature of the work. \
+                During my time here I processed a very high volume of assets, for which I leveraged \
+                the power of data analysis software to deliver impactful reports and strategise processes \
+                to meet KPIs. This was a highly regulated role, involving high stakes, where thorough \
+                research and understnding of content was paramount."
         }
     ];
 
@@ -115,7 +115,7 @@ class WorkSection extends Component {
         const { classes } = this.props;
         const { dialogOpen, selectedInst, selectedElab } = this.state;
         return (
-            <div className={classes.holder} id='work'>
+            <div className={classes.holder} id="work">
                 {this.eductations.map(e => {
                     return (
                         <Card className={classes.card} key={e.institution}>
@@ -123,11 +123,11 @@ class WorkSection extends Component {
                                 disableRipple={true}
                                 disableTouchRipple={true}
                                 onClick={() =>
-                                        this.handleDialogOpen(
-                                            e.institution,
-                                            e.elaboration
-                                        )
-                                    }
+                                    this.handleDialogOpen(
+                                        e.institution,
+                                        e.elaboration
+                                    )
+                                }
                             >
                                 <CardMedia
                                     component="img"
@@ -149,10 +149,7 @@ class WorkSection extends Component {
                                     >
                                         {e.institution}
                                     </Typography>
-                                    <Typography
-                                        gutterBottom
-                                        component="p"
-                                    >
+                                    <Typography gutterBottom component="p">
                                         {e.years}
                                     </Typography>
                                     <Typography component="p">

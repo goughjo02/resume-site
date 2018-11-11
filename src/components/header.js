@@ -118,7 +118,8 @@ class Header extends Component {
                         indicatorColor="primary"
                         textColor="primary"
                         centered
-                        fullWidth={!isWidthUp("sm", this.props.width)}
+                        scrollable={!isWidthUp("sm", this.props.width)}
+                        //fullWidth={!isWidthUp("sm", this.props.width)}
                     >
                         <Tab className={classes.tab} label="Profile" />
                         <Tab className={classes.tab} label="Education" />

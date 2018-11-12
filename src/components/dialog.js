@@ -8,40 +8,26 @@ import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import withMobileDialog from "@material-ui/core/withMobileDialog";
 
-class ResponsiveDialog extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        const { elab, fullScreen, handleClose, inst, open } = this.props;
-        return (
-            <Dialog
-                fullScreen={fullScreen}
-                open={open}
-                onClose={handleClose}
-                aria-labelledby="responsive-dialog-title"
-            >
-                <DialogTitle id="responsive-dialog-title">
-                    {inst}
-                </DialogTitle>
-                <DialogContent>
-                    <DialogContentText align='justify'>
-                        {elab}
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions>
-                    <Button
-                        onClick={handleClose}
-                        color="primary"
-                        autoFocus
-                    >
-                        close
-                    </Button>
-                </DialogActions>
-            </Dialog>
-        );
-    }
+function ResponsiveDialog(props) {
+    const { elab, fullScreen, handleClose, inst, open } = props;
+    return (
+        <Dialog
+            fullScreen={fullScreen}
+            open={open}
+            onClose={handleClose}
+            aria-labelledby="responsive-dialog-title"
+        >
+            <DialogTitle id="responsive-dialog-title">{inst}</DialogTitle>
+            <DialogContent>
+                <DialogContentText align="justify">{elab}</DialogContentText>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={handleClose} color="primary" autoFocus>
+                    close
+                </Button>
+            </DialogActions>
+        </Dialog>
+    );
 }
 
 ResponsiveDialog.propTypes = {

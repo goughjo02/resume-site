@@ -8,9 +8,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import StarIcon from "@material-ui/icons/Star";
 import Divider from "@material-ui/core/Divider";
 
 const styles = theme => ({
@@ -23,11 +21,8 @@ const styles = theme => ({
     }
 });
 
-class SkillsSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    skills = [
+function SkillsSection(props) {
+    const skills = [
         {
             title: "Web Technologies",
             skills: [
@@ -152,25 +147,22 @@ class SkillsSection extends React.Component {
             ]
         }
     ];
-    render() {
-        const { classes } = this.props;
-        return (
-            <div className={classes.root}>
-                {this.skills.map(e => {
-                    return (
-                        <ExpansionPanel key={e.title}>
-                            <ExpansionPanelSummary
-                                expandIcon={<ExpandMoreIcon />}
-                            >
-                                <Typography className={classes.heading}>
-                                    {e.title}
-                                </Typography>
-                            </ExpansionPanelSummary>
-                            <ExpansionPanelDetails id={`details${e.title}`}>
-                                <List>
-                                    {e.skills.map((f, i) => {
-                                        if ( i=== 0 ) {
-                                            return (
+    const { classes } = props;
+    return (
+        <div className={classes.root}>
+            {skills.map(e => {
+                return (
+                    <ExpansionPanel key={e.title}>
+                        <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
+                            <Typography className={classes.heading}>
+                                {e.title}
+                            </Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails id={`details${e.title}`}>
+                            <List>
+                                {e.skills.map((f, i) => {
+                                    if (i === 0) {
+                                        return (
                                             <React.Fragment>
                                                 <Divider />
                                                 <ListItem key={f.title}>
@@ -181,7 +173,7 @@ class SkillsSection extends React.Component {
                                                 <Divider />
                                             </React.Fragment>
                                         );
-                                        } else {
+                                    } else {
                                         return (
                                             <React.Fragment>
                                                 <ListItem key={f.title}>
@@ -193,16 +185,15 @@ class SkillsSection extends React.Component {
                                             </React.Fragment>
                                         );
                                     }
-                                    })}
-                                </List>
-                                <Divider />
-                            </ExpansionPanelDetails>
-                        </ExpansionPanel>
-                    );
-                })}
-            </div>
-        );
-    }
+                                })}
+                            </List>
+                            <Divider />
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                );
+            })}
+        </div>
+    );
 }
 
 SkillsSection.propTypes = {

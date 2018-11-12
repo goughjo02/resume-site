@@ -72,7 +72,7 @@ class profileSection extends Component {
                     <div className={classes.title}>
                         <h3>Joey Gough</h3>
                         <div className={classes.imageHolder}>
-                            <img className='blackWhiteImg' src={ME} height={"100%"} width="autp" />
+                            <img alt='profile' className='blackWhiteImg' src={ME} height={"100%"} width="autp" />
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -71,20 +70,20 @@ class WorkSection extends Component {
 
     eductations = [
         {
-            institution: "Peaceful Programming",
-            years: "Jan - May 2018",
-            description: "Product Engineer",
-            image: PP,
-            elaboration:
-                "As co-director and product engineer at Peaceful Programming I had several small projects and one large project. The large project, which recently finished (March 2018), involved the construction of a bespoke remote data acquisition system and a companion web dashboard for a novel wave energy technology developed by Blue Power energy. This product included a real time data visualization website. Technologies used included Python, Elixir Phoenix, ReactJs, and C++/Arduino."
-        },
-        {
             institution: "Initiafy",
             years: "June 2018 - Present",
             description: "Web Developer",
             image: Initiafy,
             elaboration:
                 "Initiafy is an online contractor management software, which provides services primarily for the pharmaceutical and construction industries. At initiafy, I provide technical support for the current platform. The majority of my time is spent on developing an SPA, which is intended to  succeed the current platform. This is a .NET stack and the majority of my time is spent working with the latest version of Angular."
+        },
+        {
+            institution: "Peaceful Programming",
+            years: "Jan - May 2018",
+            description: "Product Engineer",
+            image: PP,
+            elaboration:
+                "As co-director and product engineer at Peaceful Programming I had several small projects and one large project. The large project, which recently finished (March 2018), involved the construction of a bespoke remote data acquisition system and a companion web dashboard for a novel wave energy technology developed by Blue Power energy. This product included a real time data visualization website. Technologies used included Python, Elixir Phoenix, ReactJs, and C++/Arduino."
         },
         {
             institution: "Grant Thornton",
@@ -118,7 +117,7 @@ class WorkSection extends Component {
                                     component="img"
                                     alt={e.institution}
                                     className={
-                                        e.institution == "Peaceful Programming"
+                                        e.institution === "Peaceful Programming"
                                             ? classes.contain
                                             : classes.media
                                     }

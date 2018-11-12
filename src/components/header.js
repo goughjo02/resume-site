@@ -4,9 +4,7 @@ import withWidth, { isWidthUp } from "@material-ui/core/withWidth";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
-import AppBar from "@material-ui/core/AppBar";
 import Typography from "@material-ui/core/Typography";
-import SwipeableViews from "react-swipeable-views";
 import PropTypes from "prop-types";
 import ME from "../sdford.jpg";
 
@@ -101,7 +99,7 @@ class Header extends Component {
     };
 
     render() {
-        const { classes, theme } = this.props;
+        const { classes } = this.props;
         const { value } = this.state;
         return (
             <div className={classes.root}>

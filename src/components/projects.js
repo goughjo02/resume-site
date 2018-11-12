@@ -72,13 +72,7 @@ class ProjectsSection extends Component {
             description: "Data Acquisition Lead",
             image: GWK,
             elaboration:
-                "Following the development of a bespoke data-acquisition and remote monitoring system \
-                (described in the careers section under Peaceful Programming), I travelled to \
-                Hannover Germany to install the system in a flume tank, to ensure that it was fully operational, \
-                and to make any last minute modifications neccessary to accomodate the research team. \
-                This was a very useful excercise as it provided us with alot of useful feedback as to how \
-                the system is being used, the sort of expectations that users have, and ultimately any design \
-                modifications that will be useful in the next iteration of this product."
+                "Following the development of a bespoke data-acquisition and remote monitoring system for Blue Power Energy, I travelled to Hannover Germany to install the system in a state-of-the-art flume tank, to ensure that it was fully operational, and to make any last minute modifications necessary to accommodate the research team. This was a very useful exercise as it provided invaluable feedback as to how the system is used, the sort of expectations that users have, and ultimately any design modifications that will be useful in the next iteration of this product."
         },
         {
             institution: "Undergraduate Research",
@@ -86,18 +80,7 @@ class ProjectsSection extends Component {
             description: "Mechanotransduction",
             image: Thesis,
             elaboration: 
-                "During my undergraduate final-year project, I investigated the effects of \
-                mechanical stimulation on the development of articular cartilage. \
-                During this project I was responsible for receiving biological samples, \
-                dissecting and storing organs, preparing organs with parafin wax embedding, \
-                performing microtome sectioning of embedded organs, and performing histology \
-                and immunohistochemistry on the sectioned samples. Data was collected on the samples using \
-                basic microscopy and fluorescent microscopy (for immunohistochemical samples). \
-                Preparation for this project was based on work-to-date at the time, and through discusion with \
-                my research supervisor we decided where my effors would be best placed. Following the \
-                practical aspect of this project, I organised the most relevant results into a comprehensive report, \
-                which highlighted the relevance of the results for that particular field of research, \
-                and I drew conclusions and inspiration for future work based on a thorough literature review "
+                "During my undergraduate final-year project, I investigated the effects of mechanical stimulation on the development of articular cartilage. During this project I was responsible for receiving biological samples, dissecting and storing organs, preparing organs with paraffin wax embedding, performing microtome sectioning of embedded organs, and performing histology and immunohistochemistry on the sectioned samples. Data was collected on the histological samples using basic microscopy and fluorescent microscopy for immunohistochemical samples. Preparation for this project was based on work-to-date at the time, and through discussion with my research supervisor we decided where my efforts would be best placed. Following the practical aspect of this project, I organised the most relevant results into a comprehensive report, which highlighted the relevance of the results for that particular field of research, and I drew conclusions and inspiration for future work based on a thorough literature review."
         },
         {
             institution: "Rise Rwanda",
@@ -105,14 +88,7 @@ class ProjectsSection extends Component {
             description: "Volunteer",
             image: Rise,
             elaboration:
-                "Working closely with martketing professionals and graphic designers, \
-                I develop and maintain the charity's website. In addition to this, in 2017, \
-                we made a large push for funding to fund the organisations micro-financing project. \
-                I was heavily involved in the writing of funding applications and we \
-                had a remarkably high success rate, receiving funding from The RTE One World Fund \
-                and The UDG Healthcare CSR Fund, and many others. From this we received enough seed funding \
-                to begin the micro-finance project which initiated early in 2018 when participants received their \
-                first micro-financing loans."
+                "Rise Rwanda is a not-for-profit charity based in Dublin, Ireland, which works to provide economic opportunities and education to women and children in Rwamagana, Rwanda. Working closely with marketing professionals and graphic designers, I develop and maintain the charity's website. In addition to this, in 2017, we made a large push for funding to fund the organisations micro-financing project. I was heavily involved in the writing of funding applications and we had a remarkably high success rate, receiving funding from The RTE One World Fund and The UDG Healthcare CSR Fund, and many others. From this we received enough seed funding to begin the micro-finance project which began early in 2018 when participants received their first micro-financing loans."
         }
     ];
 

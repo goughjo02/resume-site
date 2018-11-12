@@ -78,17 +78,9 @@ class profileSection extends Component {
                 </div>
                 <div className={classes.textHolder}>
                     <p className={classes.text}>
-                        Hello, my name is Joey Gough, I am a web developer, a
-                        data-scientist, a creator, and an explorer. In the past
-                        I have worked on a variety of different projects,
-                        ranging from academic scientific research to developing engineering
-                        and IoT solutions. I am ambitious and hard-working. With
-                        a thirst for understanding and an enterprising
-                        personality, I am always looking for new and exciting
-                        opportunities.{" "}
+                        I am a web developer, a data-scientist, an engineer, and a researcher. In the past I have worked on a variety of different projects, ranging from academic laboratory research to developing engineering and IoT solutions. I am ambitious and hard-working. With a thirst for understanding and an enterprising personality, I am always looking for new and exciting opportunities. Thank you for reading my resume.
                     </p>
                     <p className={classes.text}>
-                        {" "}
                         I maintain this personal website to serve as a resume.
                         Thank you for visiting my site. Please get in touch.
                     </p>

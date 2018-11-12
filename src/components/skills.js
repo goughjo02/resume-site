@@ -32,9 +32,6 @@ class SkillsSection extends React.Component {
             title: "Web Technologies",
             skills: [
                 {
-                    title: "HTML5 / CSS3 / Javascript (ECMAScript 6 )"
-                },
-                {
                     title: "ReactJS / Redux"
                 },
                 {
@@ -51,9 +48,6 @@ class SkillsSection extends React.Component {
                 },
                 {
                     title: "SQL"
-                },
-                {
-                    title: "C# / .NET / IIS"
                 },
                 {
                     title: "Python Flask / uWSGI"
@@ -107,9 +101,6 @@ class SkillsSection extends React.Component {
                     title: "Python GPIO / PyQtGraph"
                 },
                 {
-                    title: "Linux / systemd"
-                },
-                {
                     title: "Electronic Circuit design"
                 },
                 {
@@ -118,7 +109,7 @@ class SkillsSection extends React.Component {
             ]
         },
         {
-            title: "Statistics",
+            title: "Data Science Skills",
             skills: [
                 {
                     title: "R"
@@ -135,7 +126,7 @@ class SkillsSection extends React.Component {
             ]
         },
         {
-            title: "Laboratory Techniques",
+            title: "Research Techniques",
             skills: [
                 {
                     title: "Dissection"

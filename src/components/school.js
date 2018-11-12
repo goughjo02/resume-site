@@ -67,17 +67,12 @@ class SchoolSection extends Component {
 
     eductations = [
         {
-            institution: "Belvedere College SJ",
-            years: "Sept 2004 - Jun 2010",
-            description: "School in Dublin inner city",
-            image: Belvedere,
+            institution: "University College Dublin",
+            years: "Sept 2015 - Jun 2016",
+            description: "MSc Biotech & Business",
+            image: UCD,
             elaboration:
-                "During my time in Belvedere, \
-                my study focused primarily in Mathematics \
-                (including Applied Mathematics) and various \
-                scientific subjects (including Chemistry and Biology). I also studied French, German, and Latin. My extracurricular activities included stage-crew for \
-                the dramatic society, playing rugby, \
-                the mathematics club and film club"
+                "This course focused primarily on commercial aspects of technology development, including marketing, corporate finance, regulatory affairs, and technology development processes, such as management science, organisational behaviour, mergers and acquisitions, and team-work exercises. As part of this course, I also performed practical studies in NIBRT, the national institutes for biological research and training, where I studied industrial techniques in the area of biotechnology such as maintenance of essential hardware, including steam-in-place, cell culture management, column chromatography and others."
         },
         {
             institution: "Trinity College Dublin",
@@ -85,26 +80,15 @@ class SchoolSection extends Component {
             description: "Natural Sciences Degree",
             image: TCD,
             elaboration:
-                "In my freshman years, my academic subjects were spread across Mathematics, Biology, and Chemistry.\
-                In my Sophister years, my studies focused broadly on Genetics, animal and plant Physiology, \
-                and Developmental Biology. This was amongst many other subjects including environmental biology, \
-                chemical signalling in biological organisms, and comparative studies of ubiquitous mechanisms in the biosphere."
+                "In my freshman years, my academic subjects were spread across Mathematics, Biology, and Chemistry. In my Sophister years, my studies focused broadly on Genetics, animal and plant Physiology, Developmental Biology, and stem cell Biology. These were among many other subjects including environmental biology, chemical signalling in biological organisms, and comparative studies of ubiquitous mechanisms in nature."
         },
         {
-            institution: "University College Dublin",
-            years: "Sept 2015 - Jun 2016",
-            description: "MSc Biotech & Business",
-            image: UCD,
+            institution: "Belvedere College SJ",
+            years: "Sept 2004 - Jun 2010",
+            description: "School in Dublin inner city",
+            image: Belvedere,
             elaboration:
-                "This course focused primarily on commercial \
-                aspects of technology development, \
-                including marketing, corporate finance, \
-                regulatory affairs, and technology development processes, such as \
-                management science, organisational behaviour, \
-                mergers, acquisitions, and collaborations, and team-work exercises. \
-                As part of this course, I also performed practical studies \
-                in NIBRT, the national institutes for biological research and training, \
-                where I studied industrial techniques in the area of biotechnology. "
+                "During my time in Belvedere, my study focused primarily in Mathematics (including Applied Mathematics) and various scientific subjects (including Chemistry and Biology). I also studied French, German, and Latin. My extracurricular activities included stage-crew for the dramatic society, playing rugby, the mathematics club and film club."
         }
     ];
 

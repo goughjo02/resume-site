@@ -72,13 +72,13 @@ class profileSection extends Component {
                     <div className={classes.title}>
                         <h3>Joey Gough</h3>
                         <div className={classes.imageHolder}>
-                            <img src={ME} height={"100%"} width="autp" />
+                            <img className='blackWhiteImg' src={ME} height={"100%"} width="autp" />
                         </div>
                     </div>
                 </div>
                 <div className={classes.textHolder}>
                     <p className={classes.text}>
-                        I am a web developer, a data-scientist, an engineer, and a researcher. In the past I have worked on a variety of different projects, ranging from academic laboratory research to developing engineering and IoT solutions. I am ambitious and hard-working. With a thirst for understanding and an enterprising personality, I am always looking for new and exciting opportunities. Thank you for reading my resume.
+                        Hello, My name is Joey Gough. I am a web developer, a data-scientist, an engineer, and a researcher. In the past I have worked on a variety of different projects, ranging from academic laboratory research to developing engineering and IoT solutions. I am ambitious and hard-working. With a thirst for understanding and an enterprising personality, I am always looking for new and exciting opportunities.
                     </p>
                     <p className={classes.text}>
                         I maintain this personal website to serve as a resume.

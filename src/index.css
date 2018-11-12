@@ -22,3 +22,8 @@ code {
 	-webkit-text-stroke-color: black;
 	letter-spacing: 5px;
 }
+
+.blackWhiteImg {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}

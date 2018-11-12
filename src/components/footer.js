@@ -32,8 +32,11 @@ const styles = theme => ({
         whiteSpace: "nowrap",
         paddingTop: '8px',
         paddingBottom: '8px',
+        marginLeft: '8px',
+        marginRight: '8px',
         [theme.breakpoints.down("sm")]: {
             flex: "1",
+            flexBasis: '290px',
             alignItems: "center",
             textAlign: "center"
         }
@@ -63,6 +66,7 @@ function footer(props) {
                     goughjo02@gmail.com
                 </div>
                 <div className={classes.oneContactInfo}>+353 87 241 3665</div>
+                <div className={classes.oneContactInfo}><a href='https://github.com/goughjo02'>Github</a></div>
             </div>
         </Paper>
     );
